@@ -22,7 +22,7 @@ LFLAGS := -L./libs
 # TODO: If you want to create a normal binary file, remove this '-shared' flag
 LDFLAGS :=# -shared
 
-LIBS := -lm -lpthread
+LIBS :=
 
 # define the C++ source files
 SRCS := $(wildcard sources/*.cpp)
@@ -30,7 +30,7 @@ SRCS := $(wildcard sources/*.cpp)
 OBJS := $(SRCS:.cpp=.o)
 
 # define the executable file
-MAIN := the_executable_file
+MAIN := exe
 
 .PHONY: depend clean clean_all
 
