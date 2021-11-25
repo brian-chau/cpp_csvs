@@ -9,7 +9,7 @@ CC := g++
 RM := rm -rf
 
 # define any compile-time flags
-CFLAGS := -Wall -Werror -g -std=c++11
+CFLAGS := -Wall -Werror -g -std=c++17
 
 # define any directories containing header files other than /usr/include
 #
@@ -41,7 +41,7 @@ $(MAIN): $(OBJS)
 	# TODO: If you want to create a normal binary file, use this
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
 	# TODO: If you want to create a shared library, use this
-	#$(CC) $(LDFLAGS) -o $@ $^
+	#$(CC) $(CFLAGS) $(LDFLAGS) $(LIBS) -o $@ $^
 
 .cpp.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
